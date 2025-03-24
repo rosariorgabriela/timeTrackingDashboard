@@ -1,0 +1,297 @@
+/* general rulesets */
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: hsl(226, 43%, 10%);
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+.parent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: fit-content;
+    margin: auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: hsl(235, 46%, 20%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal input {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+  #submit-activity, #close-modal {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background-color: hsl(236, 100%, 87%);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 2px;
+  }
+
+  #submit-activity:hover, #close-modal:hover {
+    background-color: hsl(246, 90%, 50%);
+    transform: scale(1.05);
+}
+
+#submit-activity:active, #close-modal:active {
+    transform: scale(0.95);
+}
+  
+  #add-card-btn {
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background: hsl(246, 80%, 60%);
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+.grid-container {
+    position: relative;
+    display: grid;
+    max-width: 100%;
+    height: auto;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: auto;
+    margin: 0 auto;
+    align-content: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* general card ruleset */
+.card {
+    border-radius: 15px;
+    position: relative;
+    height: 200px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.card-header img {
+    margin-right: 10px;
+}
+
+.card:not(.user-card) .overlay {
+    background-color: hsl(235, 46%, 20%);
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+/* new card header background colors */
+.header.bg {
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    border-radius: 10px 10px 0 0;
+}
+
+.current-hours {
+    font-size: 30px;
+}
+
+.previous-hours {
+    font-size: 13px;
+    color: hsla(236, 100%, 87%, 0.7) ;
+}
+
+.stats-button {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    border: none;
+    color: hsla(236, 100%, 87%, 0.7) ;
+    font-size: 13px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    padding: 9px;
+}
+
+.stats-button:hover,
+.stats-button:active {
+    color: white;
+    font-weight: bold;
+}
+
+.add-activity-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding: 10px 0px;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+}
+
+#add-activity {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 24px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* specific card rulesets */
+.user-card {
+    grid-row: 1 / 3;
+    height: auto;
+    position: relative;
+    background-color: hsl(235, 46%, 20%);
+    padding-bottom: 30px;
+}
+
+#name {
+    font-size: 25px;
+    margin: 0 0 10px 0;
+    color: white;
+    line-height: 1.3;
+}
+
+.user-card img {
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-bottom: 20px;
+}
+
+.user-card p {
+    color: hsla(158 3% 77% / 0.93);
+}
+
+.user-card .overlay {
+    width: 100%;
+    height: 75%;
+    background-color: hsl(246, 80%, 60%);
+    font-size: 10px;
+    border-radius: 10px;
+    padding: 35px 15px 0px 15px;
+    box-sizing: border-box;
+}
+
+.work-card {
+    background-color: hsl(15, 100%, 70%);
+}
+
+.play-card {
+    background-color: hsl(195, 74%, 62%);
+}
+
+.study-card {
+    background-color: hsl(348, 100%, 68%);
+}
+
+.exercise-card {
+    background-color: hsl(145, 58%, 55%);
+}
+
+.social-card {
+    background-color: hsl(264, 64%, 52%);
+}
+
+.selfcare-card {
+    background-color: hsl(43, 84%, 65%);
+}
+
+.buttons-container {
+    padding: 10px;
+}
+
+/* media queries */
+@media (max-width: 768px) {
+    body {
+    
+    }
+
+    .grid-container {
+        grid-template-columns: none;
+        grid-template-rows: none;
+    }
+
+    #name {
+        font-size: 15px;
+    }
+
+    .card {
+       width: 100%;
+    }
+
+    .user-card img {
+        width: 45px;
+        height: 45px;
+  }
+
+  .current-hours {
+    font-size: 24px;
+  }
+
+  .buttons-container {
+    display: flex;
+    gap: 2px;
+  }
+
+  .stats-button {
+    flex: 1; 
+    font-size: 10px;
+  }
+
+  .add-activity-container {
+    margin-bottom: 50px;
+  }
+}

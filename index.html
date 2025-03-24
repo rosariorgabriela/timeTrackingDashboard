@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body>
+    <div class="parent-container">
+    <!--add activity button/modal-->
+    <button id="add-card-btn">+</button>
+    <div id="add-activity-modal" class="modal">
+        <div class="modal-content">
+            <h2>Add Activity</h2>
+            <label for="activity-name">Activity Name</label>
+            <input type="text" id="activity-name" placeholder="e.g., Reading" required>
+
+            <label for="activity-hours">Current Hours</label>
+            <input type="number" id="activity-hours" min="0" required>
+
+            <button id="submit-activity">Add</button>
+            <button id="close-modal">Cancel</button>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="card user-card">
+            <div class="overlay">
+                <img src="images/image-jeremy.png" height="60">
+                <div class="text-container">
+                    <p>Report for</p>
+                    <p id="name">Jeremy Robson</p>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <button class="stats-button" data-timeframe="daily">Daily</button>
+                <button class="stats-button" data-timeframe="weekly">Weekly</button>
+                <button class="stats-button" data-timeframe="monthly">Monthly</button>
+            </div>
+        </div>
+        <!--Activity cards-->
+        <div class="card work-card" data-title="Work">
+            <div class="card-header">
+            <img src="images/icon-work.svg">
+            </div>
+            <div class="overlay">
+                <p id="activity-name">Work</p>
+                <div class="time">
+                    <span class="current-hours">0hrs</span><br>
+                    <span class="previous-hours">Last Week - 0hrs</span>
+                </div>
+            </div>
+        </div>
+        <div class="card play-card" data-title="Play">
+            <div class="card-header">
+            <img src="images/icon-play.svg">
+            </div>
+            <div class="overlay">
+                <p id="activity-name">Play</p>
+                <div class="time">
+                    <span class="current-hours">0hrs</span><br>
+                    <span class="previous-hours">Last Week - 0hrs</span>
+                </div>
+            </div>
+        </div>
+        <div class="card study-card" data-title="Study">
+            <div class="card-header">
+            <img src="images/icon-study.svg">
+            </div>
+            <div class="overlay">
+                <p id="activity-name">Study</p>
+                <div class="time">
+                    <span class="current-hours">0hrs</span><br>
+                    <span class="previous-hours">Last Week - 0hrs</span>
+                </div>
+            </div>
+        </div>
+        <div class="card exercise-card" data-title="Exercise">
+            <div class="card-header">
+            <img src="images/icon-exercise.svg">
+            </div>
+            <div class="overlay">
+                <p id="activity-name">Exercise</p>
+                <div class="time">
+                    <span class="current-hours">0hrs</span><br>
+                    <span class="previous-hours">Last Week - 0hrs</span>
+                </div>
+            </div>
+        </div>
+        <div class="card social-card" data-title="Social">
+            <div class="card-header">
+            <img src="images/icon-social.svg">
+            </div>
+            <div class="overlay">
+                <p id="activity-name">Social</p>
+                <div class="time">
+                <span class="current-hours">0hrs</span><br>
+                <span class="previous-hours">Last Week - 0hrs</span>
+            </div>
+        </div>
+    </div>
+    <div class="card selfcare-card" data-title="Self Care">
+        <div class="card-header">
+        <img src="images/icon-self-care.svg">
+        </div>
+        <div class="overlay">
+            <p id="activity-name">Self Care</p>
+            <div class="time">
+                <span class="current-hours">0hrs</span><br>
+                <span class="previous-hours">Last Week - 0hrs</span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/rosariorgabriela">Gabriela Rosario</a>
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
